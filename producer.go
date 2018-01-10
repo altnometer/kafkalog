@@ -44,6 +44,7 @@ var (
 // IAsyncProducer exposes writing msg to kafka stream.
 type IAsyncProducer interface {
 	Send(msg string)
+	Close()
 }
 
 func conf() *sarama.Config {
