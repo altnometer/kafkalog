@@ -1,5 +1,6 @@
 // Package kafkalog defines Send method to stream your msgs to kafka.
-// Anything sent to Stdout with fmt package will be redirected to kafka.
+// Any msg (must end with \n) sent to Stdout with fmt package commands
+// will be redirected to kafka.
 // Implement with the following code:
 // old := os.Stdout
 // r, w, err := os.Pipe()
