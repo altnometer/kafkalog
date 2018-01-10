@@ -1,5 +1,5 @@
-// Package kafkalog defines Send method to stream your logs to kafka.
-// Must have "KAFKA_BROKERS" env var formated "127.0.0.1:9092,127.0.0.1:9092"
+// Package kafkalog defines Send method to stream your msgs to kafka.
+// Anything sent to Stdout with fmt package will be redirected to kafka.
 // Implement with the following code:
 // old := os.Stdout
 // r, w, err := os.Pipe()
@@ -20,6 +20,8 @@
 // 		lw.Send(l)
 // 	}
 // }()
+// Must have "KAFKA_BROKERS" env var set
+// formated as "127.0.0.1:9092,127.0.0.1:9092".
 package kafkalog
 
 import (
