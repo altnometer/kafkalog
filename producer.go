@@ -144,7 +144,7 @@ func (p *AsyncProducer) Send(msg string) {
 }
 
 // Close closes the producer.
-func (p *AsyncProducer) Close(msg string) {
+func (p *AsyncProducer) Close() {
 	if err := p.prodr.Close(); err != nil {
 		log.Fatal("Error closing kafka AsyncProducer", err)
 	}
